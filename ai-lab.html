@@ -2,28 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#040713">
-<title>AI LAB — Explore Intelligence | Dhruv Pujara</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#02040c">
+<title>AI LAB — Inside Intelligence | Dhruv Pujara</title>
 <style>
-:root{--bg:#040713;--cyan:#65f6ff;--violet:#9d7cff;--pink:#ff65d5;--green:#6dffbd;--orange:#ffb36b;--text:#eff8ff;--muted:#8fa4c2;--glass:rgba(5,11,30,.78)}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}button,input{font:inherit}.app,.scene{position:fixed;inset:0}.scene canvas{display:block;width:100%;height:100%}.glass{background:var(--glass);border:1px solid rgba(101,246,255,.22);box-shadow:0 18px 70px rgba(0,0,0,.3);backdrop-filter:blur(18px)}.top{position:absolute;z-index:8;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;pointer-events:none}.brand,.status{pointer-events:auto;border-radius:16px;padding:10px 13px}.brand b{display:block;font-size:12px;letter-spacing:.16em}.brand span{font-size:10px;color:var(--muted)}.status{font-size:10px;letter-spacing:.1em;color:var(--cyan)}.left{position:absolute;z-index:8;top:86px;left:14px;width:min(340px,calc(100vw - 28px));border-radius:20px;padding:17px}.left h1{margin:0;font-size:25px;letter-spacing:-.03em}.left p{font-size:12px;color:var(--muted);line-height:1.5}.mission{margin:13px 0;padding:12px;border-radius:14px;background:linear-gradient(135deg,rgba(101,246,255,.08),rgba(157,124,255,.08));border:1px solid rgba(255,255,255,.08)}.mission b{font-size:10px;color:var(--cyan);letter-spacing:.12em}.mission strong{display:block;margin-top:5px;font-size:13px}.mission small{color:var(--muted)}.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.tabs button,.action{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.035);border-radius:11px;color:var(--text);padding:9px 7px;cursor:pointer;font-size:10px}.tabs button.active,.tabs button:hover,.action:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(101,246,255,.07)}.prompt{margin-top:10px;display:flex;gap:6px}.prompt input{min-width:0;flex:1;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.22);color:white;border-radius:10px;padding:9px;font-size:11px;outline:none}.prompt input:focus{border-color:var(--cyan)}.action{white-space:nowrap}.right{position:absolute;z-index:8;right:14px;top:86px;width:min(315px,calc(100vw - 28px));border-radius:20px;padding:16px;transform:translateX(calc(100% + 30px));transition:.35s ease}.right.open{transform:none}.right h2{margin:0 0 5px;font-size:18px}.right p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.meter{height:5px;background:#151e38;border-radius:10px;margin:12px 0 5px;overflow:hidden}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));transition:width .4s}.bottom{position:absolute;z-index:8;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;gap:8px;align-items:end}.controls{display:flex;gap:6px;flex-wrap:wrap}.controls button{border:1px solid rgba(101,246,255,.22);background:rgba(5,10,25,.8);color:white;border-radius:11px;padding:9px 11px;font-size:10px;cursor:pointer}.controls button:hover{border-color:var(--cyan);color:var(--cyan)}.hint{font-size:9px;color:rgba(239,248,255,.48)}.toast{position:absolute;z-index:12;left:50%;bottom:82px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:rgba(4,8,20,.9);border:1px solid rgba(101,246,255,.35);border-radius:14px;padding:10px 15px;font-size:11px;transition:.3s}.toast.show{opacity:1;transform:translate(-50%,0)}.boot{position:absolute;inset:0;z-index:30;display:grid;place-items:center;background:#040713;transition:.5s}.boot.hide{opacity:0;pointer-events:none}.bootbox{text-align:center}.bootbox h2{letter-spacing:.2em;font-size:19px}.bar{width:260px;height:5px;background:#151e38;border-radius:10px;overflow:hidden}.bar i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));transition:.15s}.score{font-size:10px;color:var(--green);margin-top:8px}@media(max-width:760px){.left{top:auto;bottom:70px;max-height:42vh;overflow:auto}.right{top:auto;bottom:70px}.status,.hint{display:none}.top{top:8px;left:8px;right:8px}.bottom{left:8px;right:8px}.controls{justify-content:flex-end}}
+:root{--bg:#02040c;--cyan:#65f6ff;--violet:#9c7cff;--pink:#ff62d4;--green:#6dffb8;--orange:#ffb36b;--text:#eff8ff;--muted:#91a4c1;--glass:rgba(3,8,22,.78)}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}.app,.scene{position:fixed;inset:0}.scene canvas{display:block;width:100%;height:100%}.glass{background:var(--glass);border:1px solid rgba(101,246,255,.22);box-shadow:0 18px 70px rgba(0,0,0,.38);backdrop-filter:blur(18px)}.top{position:absolute;z-index:20;top:12px;left:12px;right:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;pointer-events:none}.brand,.status{pointer-events:auto;border-radius:16px;padding:10px 13px}.brand b{display:block;font-size:11px;letter-spacing:.16em}.brand span{font-size:9px;color:var(--muted)}.status{font-size:9px;letter-spacing:.12em;color:var(--cyan)}.hud{position:absolute;z-index:20;left:12px;top:78px;width:min(330px,calc(100vw - 24px));padding:15px;border-radius:19px}.hud h1{font-size:23px;margin:0 0 4px}.hud p{font-size:11px;color:var(--muted);line-height:1.5;margin:0 0 10px}.mission{border:1px solid rgba(255,255,255,.09);border-radius:13px;padding:10px;margin-bottom:9px;background:linear-gradient(135deg,rgba(101,246,255,.07),rgba(156,124,255,.07))}.mission b{font-size:9px;letter-spacing:.14em;color:var(--cyan)}.mission strong{display:block;font-size:11px;margin-top:4px}.mission small{display:block;color:var(--muted);font-size:9px;margin-top:3px}.prompt{display:flex;gap:5px}.prompt input{min-width:0;flex:1;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.1);border-radius:9px;color:#fff;padding:8px;font-size:10px;outline:0}.prompt input:focus{border-color:var(--cyan)}.action,.control{background:rgba(255,255,255,.04);border:1px solid rgba(101,246,255,.22);color:#fff;border-radius:10px;padding:8px 10px;font-size:9px}.action:hover,.control:hover{border-color:var(--cyan);color:var(--cyan)}.meter{height:4px;background:#10192e;border-radius:8px;overflow:hidden;margin:9px 0 3px}.meter i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));transition:width .3s}.stage{font-size:8px;color:var(--muted)}.panel{position:absolute;z-index:20;right:12px;top:78px;width:min(300px,calc(100vw - 24px));padding:15px;border-radius:19px;transform:translateX(calc(100% + 30px));transition:.35s}.panel.open{transform:none}.panel h2{font-size:17px;margin:0 0 4px}.panel p{font-size:10px;color:var(--muted);line-height:1.55;margin:0}.bottom{position:absolute;z-index:20;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:end;gap:8px}.controls{display:flex;flex-wrap:wrap;gap:5px}.control{background:rgba(2,7,19,.82)}.hint{font-size:8px;color:rgba(239,248,255,.45)}.toast{position:absolute;z-index:30;left:50%;bottom:76px;transform:translate(-50%,18px);opacity:0;pointer-events:none;background:rgba(2,7,19,.94);border:1px solid rgba(101,246,255,.32);border-radius:13px;padding:9px 13px;font-size:10px;white-space:nowrap;transition:.3s}.toast.show{opacity:1;transform:translate(-50%,0)}.boot{position:absolute;z-index:50;inset:0;display:grid;place-items:center;background:#02040c;transition:.55s}.boot.hide{opacity:0;pointer-events:none}.bootbox{text-align:center}.bootbox h2{font-size:20px;letter-spacing:.2em}.bootbox p{color:var(--muted);font-size:9px}.bar{width:270px;height:5px;background:#111a30;border-radius:10px;overflow:hidden}.bar i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));transition:.12s}.crosshair{position:absolute;z-index:15;left:50%;top:50%;width:18px;height:18px;transform:translate(-50%,-50%);pointer-events:none;opacity:0}.crosshair:before,.crosshair:after{content:"";position:absolute;background:rgba(101,246,255,.75)}.crosshair:before{width:18px;height:1px;top:9px}.crosshair:after{width:1px;height:18px;left:9px}.walk .crosshair{opacity:1}.joystick{position:absolute;z-index:25;left:18px;bottom:75px;width:90px;height:90px;border:1px solid rgba(101,246,255,.2);border-radius:50%;background:rgba(4,10,25,.35);display:none}.joyknob{position:absolute;width:38px;height:38px;left:26px;top:26px;border-radius:50%;background:rgba(101,246,255,.18);border:1px solid rgba(101,246,255,.4)}.mobileActions{position:absolute;z-index:25;right:15px;bottom:78px;display:none;gap:6px}.mobileActions button{width:46px;height:46px;border-radius:50%;background:rgba(4,10,25,.65);border:1px solid rgba(101,246,255,.3);color:#fff;font-size:9px}.walk #walkBtn{color:var(--cyan);border-color:var(--cyan)}@media(max-width:760px){.status,.hint{display:none}.top{top:8px;left:8px;right:8px}.hud{top:auto;bottom:72px;left:8px;width:calc(100vw - 16px);max-height:34vh;overflow:auto}.panel{top:auto;bottom:72px;right:8px;width:calc(100vw - 16px)}.joystick,.mobileActions{display:block}.mobileActions{display:flex}.bottom{left:8px;right:8px;bottom:8px}.controls{justify-content:flex-end}.controls .control:nth-child(2){display:none}}
 </style>
 </head>
 <body>
 <div class="app">
 <div id="scene" class="scene"></div>
-<div class="top"><div class="brand glass"><b>AI LAB · DHRUV PUJARA</b><span>ENTER THE MACHINE · EXPLORE · EXPERIMENT · UNDERSTAND</span></div><div class="status glass">● SYSTEM ONLINE · 360° · WEBXR</div></div>
-<aside class="left glass">
-<h1>Inside an AI</h1><p>This is not a slideshow. Explore the machine, send a prompt through the pipeline, and watch the information move through the model.</p>
-<div class="mission"><b>MISSION 01</b><strong id="mission">Send a message into the AI Core.</strong><small id="missionSub">Watch the signal transform from words into a prediction.</small></div>
-<div class="tabs"><button data-mode="explore" class="active">EXPLORE</button><button data-mode="simulate">SIMULATE</button><button data-mode="challenge">CHALLENGE</button></div>
+<div class="top"><div class="brand glass"><b>AI LAB · DHRUV PUJARA</b><span>INSIDE INTELLIGENCE · WALK THE MACHINE</span></div><div class="status glass">● CORE ONLINE · 1,200 NEURONS · WEBXR</div></div>
+<section class="hud glass">
+<h1>Inside an AI</h1>
+<p>You are inside a living model. Walk through the lab, inspect stations, and send a prompt through the machine.</p>
+<div class="mission"><b id="missionTag">MISSION 01</b><strong id="mission">Enter the AI Core.</strong><small id="missionSub">Switch to Walk Mode and explore the facility.</small></div>
 <div class="prompt"><input id="prompt" value="Explain black holes" aria-label="AI prompt"><button class="action" id="send">SEND ⚡</button></div>
-<div class="meter"><i id="meter"></i></div><small id="stage" style="color:var(--muted);font-size:9px">CORE IDLE</small>
-</aside>
-<aside id="right" class="right glass"><h2 id="title">AI Core</h2><p id="desc">Click a glowing module. Each module represents a simplified part of a modern AI system.</p></aside>
-<div class="toast" id="toast"></div>
-<div class="bottom"><div class="hint">DRAG · ORBIT &nbsp; • &nbsp; WHEEL · ZOOM &nbsp; • &nbsp; CLICK · INSPECT</div><div class="controls"><button id="tour">▶ AI TOUR</button><button id="reset">↺ RESET</button><button id="vr">◉ VR</button></div></div>
-<div id="boot" class="boot"><div class="bootbox"><h2>BOOTING AI LAB</h2><div class="bar"><i id="bootbar"></i></div><div class="score">LOADING NEURAL SYSTEMS…</div></div></div>
+<div class="meter"><i id="meter"></i></div><div class="stage" id="stage">SYSTEM READY · WALK MODE OFF</div>
+</section>
+<section id="panel" class="panel glass"><h2 id="panelTitle">AI Core</h2><p id="panelText">Click a glowing station to inspect how this part of an AI system works.</p></section>
+<div class="crosshair"></div>
+<div id="toast" class="toast"></div>
+<div id="joystick" class="joystick"><div id="joyknob" class="joyknob"></div></div>
+<div class="mobileActions"><button id="mobileForward">▲</button><button id="mobileInteract">USE</button></div>
+<div class="bottom"><div class="hint">WASD · MOVE &nbsp; SHIFT · RUN &nbsp; MOUSE · LOOK &nbsp; E · INTERACT</div><div class="controls"><button class="control" id="walkBtn">🚶 WALK LAB</button><button class="control" id="orbitBtn">◎ ORBIT</button><button class="control" id="tourBtn">▶ AI TOUR</button><button class="control" id="resetBtn">↺ RESET</button><button class="control" id="vrBtn">◉ VR</button></div></div>
+<div id="boot" class="boot"><div class="bootbox"><h2>OPENING AI FACILITY</h2><div class="bar"><i id="bootbar"></i></div><p>Constructing neural space · calibrating attention field · waking the AI Core</p></div></div>
 </div>
 <script type="importmap">
 {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"}}
@@ -31,68 +34,259 @@
 <script type="module">
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {PointerLockControls} from 'three/addons/controls/PointerLockControls.js';
 
-const scene=new THREE.Scene();scene.background=new THREE.Color(0x040713);scene.fog=new THREE.FogExp2(0x040713,.026);
-const camera=new THREE.PerspectiveCamera(55,innerWidth/innerHeight,.1,150);camera.position.set(0,7.5,20);
-const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.xr.enabled=true;document.querySelector('#scene').appendChild(renderer.domElement);
-const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.06;controls.minDistance=7;controls.maxDistance=35;controls.target.set(0,4,0);
-scene.add(new THREE.HemisphereLight(0x8fdcff,0x050711,1.6));
-for(const [c,p,i] of [[0x65f6ff,[-8,8,5],38],[0x9d7cff,[8,7,-4],32],[0xff65d5,[5,2,6],26]]){const l=new THREE.PointLight(c,i,30);l.position.set(...p);scene.add(l)}
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0x02040c);
+scene.fog=new THREE.FogExp2(0x02040c,.018);
+const camera=new THREE.PerspectiveCamera(72,innerWidth/innerHeight,.08,180);
+camera.position.set(0,2.15,13);
+const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.setSize(innerWidth,innerHeight);
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.xr.enabled=true;
+document.querySelector('#scene').appendChild(renderer.domElement);
+
+const orbit=new OrbitControls(camera,renderer.domElement);
+orbit.enableDamping=true;
+orbit.minDistance=5;
+orbit.maxDistance=45;
+orbit.target.set(0,3,0);
+const walk=new PointerLockControls(camera,renderer.domElement);
+
+scene.add(new THREE.HemisphereLight(0x8fe7ff,0x03050e,1.35));
+for(const [color,pos,intensity] of [[0x65f6ff,[-8,6,8],30],[0x9c7cff,[8,7,-7],32],[0xff62d4,[0,5,3],28],[0x6dffb8,[0,3,-13],22]]){
+ const l=new THREE.PointLight(color,intensity,30);l.position.set(...pos);scene.add(l);
+}
 
 const world=new THREE.Group();scene.add(world);
-const floor=new THREE.Mesh(new THREE.CylinderGeometry(11,11,.35,96),new THREE.MeshStandardMaterial({color:0x070d20,metalness:.7,roughness:.28}));floor.position.y=-.3;world.add(floor);
-for(let r=3;r<=10;r+=2){const q=new THREE.Mesh(new THREE.TorusGeometry(r,.018,6,96),new THREE.MeshBasicMaterial({color:r%4?0x193858:0x65f6ff,transparent:true,opacity:.5}));q.rotation.x=Math.PI/2;q.position.y=-.08;world.add(q)}
-const grid=new THREE.GridHelper(22,44,0x193858,0x0e1c31);grid.position.y=-.07;world.add(grid);
+const lab=new THREE.Group();world.add(lab);
 
-const modules=[];const specs=[
-{id:'input',name:'INPUT GATE',sub:'Prompt enters',pos:[-8,3,2],color:0x65f6ff,desc:'Your text, image, audio, or other data enters the AI system here. Before a model can process it, the information has to be represented mathematically.'},
-{id:'token',name:'TOKENIZER',sub:'Text → tokens',pos:[-5,5.5,0],color:0x72c9ff,desc:'A language model works with tokens. Text is divided into pieces such as words, word fragments, punctuation, or special symbols.'},
-{id:'embed',name:'EMBEDDINGS',sub:'Meaning → vectors',pos:[-1.8,6.7,0],color:0x9d7cff,desc:'Tokens are mapped into numerical vectors. Similar patterns can occupy nearby regions in this learned representation space.'},
-{id:'attention',name:'ATTENTION',sub:'Context mixer',pos:[1.8,6.7,0],color:0xff65d5,desc:'Transformer attention lets tokens exchange information. It helps the model determine which parts of the context are relevant to one another.'},
-{id:'core',name:'AI CORE',sub:'Learned parameters',pos:[5,5.5,0],color:0xff9d68,desc:'The neural network contains learned parameters. During training, these parameters are adjusted to capture useful patterns from enormous datasets.'},
-{id:'predict',name:'PREDICTOR',sub:'Probability field',pos:[8,3,2],color:0xffb36b,desc:'For a language model, the network produces probabilities for possible next tokens. A decoding process selects what comes next.'},
-{id:'output',name:'OUTPUT',sub:'Answer emerges',pos:[4,1.4,5.5],color:0x6dffbd,desc:'The generated representation is decoded into an answer, image, action, or another useful output. The exact pipeline depends on the AI system.'}
+function mat(color,em=1.4,op=1){
+ return new THREE.MeshStandardMaterial({color,emissive:color,emissiveIntensity:em,transparent:op<1,opacity:op,metalness:.45,roughness:.24});
+}
+function box(x,y,z,w,h,d,m){
+ const q=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);q.position.set(x,y,z);lab.add(q);return q;
+}
+const floor=box(0,-.2,0,34,.4,34,new THREE.MeshStandardMaterial({color:0x050b18,metalness:.72,roughness:.3}));
+for(let x=-16;x<=16;x+=2){const line=box(x,.015,0,.012,.02,34,new THREE.MeshBasicMaterial({color:0x0c2941}));}
+for(let z=-16;z<=16;z+=2){box(0,.016,z,34,.02,.012,new THREE.MeshBasicMaterial({color:0x0c2941}));}
+for(const x of [-16,16])box(x,3,0,.35,6,34,mat(0x0a1830,.2));
+for(const z of [-16,16])box(0,3,z,34,6,.35,mat(0x0a1830,.2));
+const ceiling=box(0,7,0,34,.25,34,new THREE.MeshStandardMaterial({color:0x060b17,metalness:.6,roughness:.35}));
+
+const ceilingLights=[];
+for(let x=-12;x<=12;x+=4)for(let z=-12;z<=12;z+=4){
+ const l=new THREE.Mesh(new THREE.BoxGeometry(2.4,.04,.12),new THREE.MeshBasicMaterial({color:0x65f6ff}));
+ l.position.set(x,6.65,z);lab.add(l);ceilingLights.push(l);
+}
+
+const stations=[
+{id:'input',name:'01 · INPUT GATE',pos:[-11,2,-8],color:0x65f6ff,title:'Input Gate',text:'This is where information enters an AI system. A prompt can be text, an image, audio, code, or another data type. The first job is to turn it into a representation the model can process.'},
+{id:'token',name:'02 · TOKENIZER',pos:[-4,2,-8],color:0x72c9ff,title:'Tokenizer',text:'Language models do not read text exactly like people do. Text is divided into tokens—often words, word pieces, punctuation, or special symbols—and mapped to numeric IDs.'},
+{id:'embed',name:'03 · EMBEDDING VAULT',pos:[4,2,-8],color:0x9c7cff,title:'Embeddings',text:'Token IDs are converted into learned vectors. These numerical representations let the neural network operate on patterns and relationships.'},
+{id:'attention',name:'04 · ATTENTION CHAMBER',pos:[11,2,-8],color:0xff62d4,title:'Attention Chamber',text:'Transformer attention lets tokens exchange information. A token can assign different weights to other tokens, helping the network combine relevant context.'},
+{id:'core',name:'05 · AI CORE',pos:[0,2,0],color:0x8f78ff,title:'AI Core',text:'The core contains many layers and learned parameters. During training, optimization adjusts those parameters using examples so the network becomes useful at its task.'},
+{id:'predict',name:'06 · PREDICTION DECK',pos:[11,2,7],color:0xffb36b,title:'Prediction Deck',text:'For a language model, the network produces probabilities over possible next tokens. Decoding turns that probability field into the next part of the response.'},
+{id:'output',name:'07 · OUTPUT PORTAL',pos:[-10,2,8],color:0x6dffb8,title:'Output Portal',text:'The final representation is decoded into something useful: text, an image, an action, or another modality-specific result.'}
 ];
 
-function textSprite(a,b){const c=document.createElement('canvas');c.width=640;c.height=150;const x=c.getContext('2d');x.textAlign='center';x.font='700 26px Arial';x.fillStyle='#fff';x.fillText(a,320,48);x.font='16px Arial';x.fillStyle='#8fa4c2';x.fillText(b,320,83);const t=new THREE.CanvasTexture(c);const s=new THREE.Sprite(new THREE.SpriteMaterial({map:t,transparent:true,depthWrite:false}));s.scale.set(4.8,1.12,1);return s}
-function makeModule(s){const g=new THREE.Group();g.position.set(...s.pos);g.userData.id=s.id;const mat=new THREE.MeshStandardMaterial({color:s.color,emissive:s.color,emissiveIntensity:2,metalness:.25,roughness:.2});const core=new THREE.Mesh(new THREE.IcosahedronGeometry(.86,2),mat);g.add(core);const shell=new THREE.Mesh(new THREE.SphereGeometry(1.35,28,28),new THREE.MeshBasicMaterial({color:s.color,transparent:true,opacity:.055,wireframe:true}));g.add(shell);for(let i=0;i<8;i++){const n=new THREE.Mesh(new THREE.SphereGeometry(.065,8,8),new THREE.MeshBasicMaterial({color:s.color}));const a=i*Math.PI/4;n.position.set(Math.cos(a)*1.2,Math.sin(a*1.7)*.55,Math.sin(a)*1.2);g.add(n)}const label=textSprite(s.name,s.sub);label.position.y=-1.65;g.add(label);world.add(g);modules.push(g);return g}
-specs.forEach(makeModule);
+const stationMeshes=[];
+function makeLabel(text,color){
+ const c=document.createElement('canvas');c.width=700;c.height=130;const x=c.getContext('2d');
+ x.textAlign='center';x.font='700 28px Arial';x.fillStyle='#fff';x.fillText(text,350,45);
+ x.font='16px Arial';x.fillStyle='#8fa4c2';x.fillText('E / CLICK TO INSPECT',350,82);
+ const t=new THREE.CanvasTexture(c);const s=new THREE.Sprite(new THREE.SpriteMaterial({map:t,transparent:true,depthWrite:false}));
+ s.scale.set(4.8,.9,1);return s;
+}
+function makeStation(s){
+ const g=new THREE.Group();g.position.set(...s.pos);g.userData.id=s.id;
+ const platform=new THREE.Mesh(new THREE.CylinderGeometry(1.65,1.8,.22,48),new THREE.MeshStandardMaterial({color:0x081426,metalness:.8,roughness:.25}));
+ platform.position.y=.15;g.add(platform);
+ const core=new THREE.Mesh(new THREE.IcosahedronGeometry(.85,2),mat(s.color,2));
+ core.position.y=1.35;g.add(core);
+ const ring1=new THREE.Mesh(new THREE.TorusGeometry(1.25,.025,8,64),new THREE.MeshBasicMaterial({color:s.color}));
+ ring1.rotation.x=Math.PI/2;ring1.position.y=1.35;g.add(ring1);
+ const ring2=ring1.clone();ring2.rotation.y=Math.PI/2;g.add(ring2);
+ const shell=new THREE.Mesh(new THREE.SphereGeometry(1.42,24,24),new THREE.MeshBasicMaterial({color:s.color,wireframe:true,transparent:true,opacity:.08}));
+ shell.position.y=1.35;g.add(shell);
+ const label=makeLabel(s.name,s.color);label.position.y=3.05;g.add(label);
+ lab.add(g);stationMeshes.push(g);
+}
+stations.forEach(makeStation);
 
-const avatar=new THREE.Group();avatar.position.set(0,2.2,-1.5);world.add(avatar);const holo=new THREE.MeshStandardMaterial({color:0x65f6ff,emissive:0x65f6ff,emissiveIntensity:1.6,transparent:true,opacity:.48,metalness:.15,roughness:.25});
-const head=new THREE.Mesh(new THREE.SphereGeometry(.7,24,24),holo);head.position.y=2.3;avatar.add(head);const body=new THREE.Mesh(new THREE.CapsuleGeometry(.7,1.5,8,18),holo);body.position.y=.85;avatar.add(body);
-for(const x of [-1,1]){const arm=new THREE.Mesh(new THREE.CapsuleGeometry(.17,1.35,6,12),holo);arm.position.set(x*.9,.95,0);arm.rotation.z=x*.35;avatar.add(arm);const leg=new THREE.Mesh(new THREE.CapsuleGeometry(.22,1.5,6,12),holo);leg.position.set(x*.36,-.65,0);avatar.add(leg)}
-const halo=new THREE.Mesh(new THREE.TorusGeometry(1.12,.035,8,64),new THREE.MeshBasicMaterial({color:0xff65d5}));halo.rotation.x=Math.PI/2;halo.position.y=2.3;avatar.add(halo);
+const coreGroup=new THREE.Group();coreGroup.position.set(0,2,0);lab.add(coreGroup);
+const coreSphere=new THREE.Mesh(new THREE.SphereGeometry(2.3,48,48),new THREE.MeshPhysicalMaterial({color:0x6d5cff,emissive:0x6b5dff,emissiveIntensity:1.7,metalness:.15,roughness:.12,transparent:true,opacity:.34,transmission:.25,thickness:.5}));
+coreGroup.add(coreSphere);
+for(let r=2.8;r<=4.4;r+=.8){
+ const tor=new THREE.Mesh(new THREE.TorusGeometry(r,.025,8,128),new THREE.MeshBasicMaterial({color:r%1.6<.2?0xff62d4:0x65f6ff,transparent:true,opacity:.6}));
+ tor.rotation.x=Math.PI/2;coreGroup.add(tor);
+}
+const coreLight=new THREE.PointLight(0x9c7cff,75,18);coreLight.position.set(0,2,0);coreGroup.add(coreLight);
 
-const nodeLayers=[];for(let layer=0;layer<5;layer++){const layerNodes=[];for(let j=0;j<10;j++){const a=j/10*Math.PI*2+layer*.17;const n=new THREE.Mesh(new THREE.SphereGeometry(.07,8,8),new THREE.MeshBasicMaterial({color:layer%2?0x9d7cff:0x65f6ff}));n.position.set(4.5+(layer-2)*1.15,6.2+Math.sin(a)*1.7,Math.cos(a)*1.7);world.add(n);layerNodes.push(n)}nodeLayers.push(layerNodes)}
-for(let l=0;l<4;l++)for(const a of nodeLayers[l])for(let j=0;j<3;j++){const b=nodeLayers[l+1][Math.floor(Math.random()*10)];const ln=new THREE.Line(new THREE.BufferGeometry().setFromPoints([a.position,b.position]),new THREE.LineBasicMaterial({color:0x7182ff,transparent:true,opacity:.16}));world.add(ln)}
+const neuronCount=1200;
+const neuronPositions=new Float32Array(neuronCount*3);
+for(let i=0;i<neuronCount;i++){
+ const a=Math.random()*Math.PI*2;
+ const r=1.5+Math.random()*7;
+ const y=(Math.random()-.5)*7;
+ neuronPositions[i*3]=Math.cos(a)*r;
+ neuronPositions[i*3+1]=y+2;
+ neuronPositions[i*3+2]=Math.sin(a)*r;
+}
+const pointsGeo=new THREE.BufferGeometry();pointsGeo.setAttribute('position',new THREE.BufferAttribute(neuronPositions,3));
+const points=new THREE.Points(pointsGeo,new THREE.PointsMaterial({color:0x8f7cff,size:.045,sizeAttenuation:true,transparent:true,opacity:.75}));
+points.position.set(0,0,0);world.add(points);
 
-const links=[];function link(a,b,color){const curve=new THREE.CatmullRomCurve3([a.position.clone(),new THREE.Vector3((a.position.x+b.position.x)/2,7,1),b.position.clone()]);const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(curve.getPoints(40)),new THREE.LineBasicMaterial({color,transparent:true,opacity:.45}));world.add(line);links.push(curve)}
-for(let i=0;i<modules.length-1;i++)link(modules[i],modules[i+1],specs[i].color);
-const particles=[];for(let i=0;i<90;i++){const p=new THREE.Mesh(new THREE.SphereGeometry(.035+(i%4)*.01,7,7),new THREE.MeshBasicMaterial({color:i%3===0?0xff65d5:0x65f6ff}));p.userData.t=Math.random();p.userData.route=Math.floor(Math.random()*(modules.length-1));world.add(p);particles.push(p)}
+const neuralLines=[];
+for(let i=0;i<240;i++){
+ const a=new THREE.Vector3((Math.random()-.5)*12,(Math.random()-.5)*6+2,(Math.random()-.5)*12);
+ const b=a.clone().add(new THREE.Vector3((Math.random()-.5)*4,(Math.random()-.5)*3,(Math.random()-.5)*4));
+ const l=new THREE.Line(new THREE.BufferGeometry().setFromPoints([a,b]),new THREE.LineBasicMaterial({color:i%2?0x65f6ff:0x9c7cff,transparent:true,opacity:.1}));
+ world.add(l);neuralLines.push(l);
+}
 
-const ray=new THREE.Raycaster(),mouse=new THREE.Vector2();function select(id){const s=specs.find(x=>x.id===id);if(!s)return;document.querySelector('#title').textContent=s.name;document.querySelector('#desc').textContent=s.desc;document.querySelector('#right').classList.add('open');modules.forEach(m=>m.children[0].scale.setScalar(m.userData.id===id?1.3:1));}
-renderer.domElement.addEventListener('pointerdown',e=>{mouse.x=e.clientX/innerWidth*2-1;mouse.y=-(e.clientY/innerHeight)*2+1;ray.setFromCamera(mouse,camera);const hit=ray.intersectObjects(modules,true)[0];if(hit){let g=hit.object;while(g.parent&&!g.userData.id)g=g.parent;select(g.userData.id)}});
+const streams=[];
+function streamCurve(a,b,color){
+ const mid=new THREE.Vector3((a.x+b.x)/2,4.8,(a.z+b.z)/2);
+ mid.x+=(Math.random()-.5)*2;mid.z+=(Math.random()-.5)*2;
+ return new THREE.QuadraticBezierCurve3(a,mid,b);
+}
+const routeStations=[stations[0],stations[1],stations[2],stations[3],stations[4],stations[5],stations[6]];
+for(let i=0;i<routeStations.length-1;i++){
+ const curve=streamCurve(new THREE.Vector3(...routeStations[i].pos).add(new THREE.Vector3(0,1.2,0)),new THREE.Vector3(...routeStations[i+1].pos).add(new THREE.Vector3(0,1.2,0)),routeStations[i].color);
+ streams.push({curve,color:routeStations[i].color});
+}
+const dataParticles=[];
+for(let i=0;i<180;i++){
+ const p=new THREE.Mesh(new THREE.SphereGeometry(.035,7,7),new THREE.MeshBasicMaterial({color:i%4===0?0xff62d4:i%3===0?0x9c7cff:0x65f6ff}));
+ p.userData.t=Math.random();p.userData.route=Math.floor(Math.random()*streams.length);world.add(p);dataParticles.push(p);
+}
 
-let mode='explore',tour=false,tourIndex=0,tourClock=0,sim=false,simStart=0,missionDone=0;
-const toast=t=>{const e=document.querySelector('#toast');e.textContent=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),2200)};
-document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x===b));if(mode==='challenge'){document.querySelector('#mission').textContent='Find the Attention module.';document.querySelector('#missionSub').textContent='Click it before the timer expires.';toast('CHALLENGE MODE: locate ATTENTION');}else if(mode==='simulate'){document.querySelector('#mission').textContent='Run your own prompt through the AI Core.';document.querySelector('#missionSub').textContent='Press SEND and follow the signal.'}else{document.querySelector('#mission').textContent='Send a message into the AI Core.';document.querySelector('#missionSub').textContent='Watch the signal transform from words into a prediction.')}});
+const tokenGroup=new THREE.Group();tokenGroup.position.set(-4,1,-8);lab.add(tokenGroup);
+for(let i=0;i<14;i++){
+ const card=new THREE.Mesh(new THREE.BoxGeometry(.55,.04,.35),new THREE.MeshBasicMaterial({color:i%2?0x65f6ff:0x9c7cff,transparent:true,opacity:.7}));
+ card.position.set(-3.4+i*.52,.8,0);tokenGroup.add(card);
+}
+const attentionBeams=[];
+for(let i=0;i<18;i++){
+ const beam=new THREE.Line(new THREE.BufferGeometry(),new THREE.LineBasicMaterial({color:i%2?0xff62d4:0x65f6ff,transparent:true,opacity:.32}));
+ lab.add(beam);attentionBeams.push(beam);
+}
 
-document.querySelector('#send').onclick=()=>{if(sim)return;sim=true;simStart=performance.now();document.querySelector('#stage').textContent='INPUT → TOKENIZER';document.querySelector('#meter').style.width='4%';toast('Signal launched: '+document.querySelector('#prompt').value);};
-document.querySelector('#tour').onclick=()=>{tour=!tour;tourIndex=0;tourClock=0;document.querySelector('#tour').textContent=tour?'■ STOP TOUR':'▶ AI TOUR';if(tour)select(specs[0].id)};
-document.querySelector('#reset').onclick=()=>{camera.position.set(0,7.5,20);controls.target.set(0,4,0);controls.update();document.querySelector('#right').classList.remove('open');modules.forEach(m=>m.children[0].scale.setScalar(1));sim=false;document.querySelector('#meter').style.width='0';document.querySelector('#stage').textContent='CORE IDLE'};
-document.querySelector('#vr').onclick=async()=>{if(!navigator.xr){toast('WebXR is unavailable here — 360° mode still works.');return}try{if(!renderer.xr.isPresenting){const s=await navigator.xr.requestSession('immersive-vr',{optionalFeatures:['local-floor']});renderer.xr.setSession(s)}else await renderer.xr.getSession().end()}catch(e){toast('VR session could not start on this device.')}};
+const promptTerminal=new THREE.Group();promptTerminal.position.set(-10,1.2,-2);lab.add(promptTerminal);
+const terminalBody=new THREE.Mesh(new THREE.BoxGeometry(2.2,1.7,.7),new THREE.MeshStandardMaterial({color:0x091529,metalness:.75,roughness:.25}));
+promptTerminal.add(terminalBody);
+const screen=new THREE.Mesh(new THREE.PlaneGeometry(1.75,1),new THREE.MeshBasicMaterial({color:0x06141d}));
+screen.position.set(0,.2,.36);promptTerminal.add(screen);
+const terminalLabel=makeLabel('PROMPT TERMINAL','0x65f6ff');terminalLabel.position.y=1.8;promptTerminal.add(terminalLabel);
 
-function updateSimulation(dt){if(!sim)return;const elapsed=(performance.now()-simStart)/1000;const stages=['INPUT','TOKENIZER','EMBEDDINGS','ATTENTION','AI CORE','PREDICTOR','OUTPUT'];const idx=Math.min(stages.length-1,Math.floor(elapsed/1.15));document.querySelector('#stage').textContent=stages[idx]+' · PROCESSING';document.querySelector('#meter').style.width=((idx+1)/stages.length*100)+'%';if(elapsed>8){sim=false;document.querySelector('#stage').textContent='OUTPUT READY';missionDone++;toast('✓ AI generated an output from your signal');document.querySelector('#mission').textContent='Mission complete! Try another prompt.'}}
+const ray=new THREE.Raycaster(),center=new THREE.Vector2(0,0);
+let walkMode=false,tour=false,tourIndex=0,tourClock=0,simulation=false,simulationStart=0;
+const keys={};let velocity=new THREE.Vector3();let direction=new THREE.Vector3();
+const toast=t=>{const e=document.querySelector('#toast');e.textContent=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),2100)};
+function inspect(id){
+ const s=stations.find(x=>x.id===id);if(!s)return;
+ document.querySelector('#panelTitle').textContent=s.title;
+ document.querySelector('#panelText').textContent=s.text;
+ document.querySelector('#panel').classList.add('open');
+ stations.forEach(x=>{const g=stationMeshes.find(m=>m.userData.id===x.id);if(g)g.scale.setScalar(x.id===id?1.22:1)});
+ toast(s.title+' · '+s.text.split('.')[0]+'.');
+}
+function nearestStation(){
+ let best=null,dist=999;
+ for(const g of stationMeshes){const p=g.getWorldPosition(new THREE.Vector3());const d=camera.position.distanceTo(p);if(d<dist){dist=d;best=g}}
+ return dist<5?best:null;
+}
+function interact(){
+ ray.setFromCamera(center,camera);
+ const hits=ray.intersectObjects(stationMeshes,true);
+ if(hits.length){let g=hits[0].object;while(g.parent&&!g.userData.id)g=g.parent;inspect(g.userData.id);return}
+ const near=nearestStation();if(near)inspect(near.userData.id);
+}
+renderer.domElement.addEventListener('pointerdown',e=>{
+ if(walkMode){if(!walk.isLocked)walk.lock();else interact();return}
+ const m=new THREE.Vector2(e.clientX/innerWidth*2-1,-(e.clientY/innerHeight)*2+1);
+ ray.setFromCamera(m,camera);const hit=ray.intersectObjects(stationMeshes,true)[0];
+ if(hit){let g=hit.object;while(g.parent&&!g.userData.id)g=g.parent;inspect(g.userData.id)}
+});
+document.addEventListener('keydown',e=>{keys[e.code]=true;if(e.code==='KeyE')interact();if(e.code==='Escape'&&walk.isLocked)walk.unlock()});
+document.addEventListener('keyup',e=>{keys[e.code]=false});
+walk.addEventListener('lock',()=>{walkMode=true;document.body.classList.add('walk');orbit.enabled=false;document.querySelector('#stage').textContent='WALK MODE · AI FACILITY ACTIVE';toast('WALK MODE · WASD to move · E to inspect')});
+walk.addEventListener('unlock',()=>{if(walkMode){walkMode=false;document.body.classList.remove('walk');orbit.enabled=true;document.querySelector('#stage').textContent='WALK MODE PAUSED'}});
+function enableWalk(){walkMode=true;orbit.enabled=false;walk.lock()}
+document.querySelector('#walkBtn').onclick=enableWalk;
+document.querySelector('#orbitBtn').onclick=()=>{if(walk.isLocked)walk.unlock();walkMode=false;orbit.enabled=true;camera.position.set(0,7,20);orbit.target.set(0,2.5,0);orbit.update();document.querySelector('#stage').textContent='ORBIT MODE · 360° EXPLORE'};
+document.querySelector('#resetBtn').onclick=()=>{if(walk.isLocked)walk.unlock();walkMode=false;orbit.enabled=true;camera.position.set(0,7,20);orbit.target.set(0,2.5,0);orbit.update();document.querySelector('#panel').classList.remove('open');document.querySelector('#meter').style.width='0';document.querySelector('#stage').textContent='SYSTEM READY · WALK MODE OFF';simulation=false};
+document.querySelector('#tourBtn').onclick=()=>{tour=!tour;tourIndex=0;tourClock=0;document.querySelector('#tourBtn').textContent=tour?'■ STOP TOUR':'▶ AI TOUR';if(tour){if(walk.isLocked)walk.unlock();walkMode=false;orbit.enabled=true;inspect(stations[0].id)}};
+document.querySelector('#send').onclick=()=>{
+ simulation=true;simulationStart=performance.now();document.querySelector('#meter').style.width='5%';document.querySelector('#stage').textContent='INPUT GATE · SIGNAL LAUNCHED';toast('⚡ Prompt entered the AI facility: '+document.querySelector('#prompt').value);
+};
+document.querySelector('#vrBtn').onclick=async()=>{
+ if(!navigator.xr){toast('WebXR is unavailable here. 360° orbit and Walk Mode still work.');return}
+ try{if(!renderer.xr.isPresenting){const s=await navigator.xr.requestSession('immersive-vr',{optionalFeatures:['local-floor']});renderer.xr.setSession(s);toast('VR MODE ACTIVE')}else await renderer.xr.getSession().end()}catch(e){toast('VR could not start on this device.')}
+};
+document.querySelector('#mobileInteract').onclick=interact;
+document.querySelector('#mobileForward').onclick=()=>{camera.getWorldDirection(direction);direction.y=0;direction.normalize();camera.position.addScaledVector(direction,1.2)};
 
-function animate(t){const dt=Math.min(.05,(t-(animate.last||t))/1000);animate.last=t;controls.update();world.rotation.y+=dt*.012;avatar.rotation.y+=dt*.28;avatar.position.y=2.2+Math.sin(t*.0018)*.08;halo.rotation.z+=dt*.7;
-modules.forEach((m,i)=>{const p=1+Math.sin(t*.002+i)*.045;m.children[0].scale.lerp(new THREE.Vector3(p,p,p),.08);m.children[1].rotation.x+=dt*.22;m.children[1].rotation.y+=dt*.3});
-particles.forEach(p=>{p.userData.t=(p.userData.t+dt*.12)%1;const r=p.userData.route;const q=links[r];if(q){const pt=q.getPoint(p.userData.t);p.position.copy(pt)}});
-if(tour){tourClock+=dt;if(tourClock>2.8){tourClock=0;tourIndex=(tourIndex+1)%specs.length;select(specs[tourIndex].id)}const target=modules[tourIndex].position.clone();controls.target.lerp(target,.025);camera.position.lerp(target.clone().add(new THREE.Vector3(0,1.5,7.5)),.018)}
-if(mode==='challenge'&&!tour&&!sim){const a=modules.find(x=>x.userData.id==='attention');a.children[0].rotation.y+=dt*.8}
-updateSimulation(dt);renderer.render(scene,camera)}
+function simulationTick(){
+ if(!simulation)return;
+ const elapsed=(performance.now()-simulationStart)/1000;
+ const names=['INPUT GATE','TOKENIZER','EMBEDDING VAULT','ATTENTION CHAMBER','AI CORE','PREDICTION DECK','OUTPUT PORTAL'];
+ const idx=Math.min(names.length-1,Math.floor(elapsed/1.15));
+ document.querySelector('#stage').textContent=names[idx]+' · PROCESSING';
+ document.querySelector('#meter').style.width=((idx+1)/names.length*100)+'%';
+ if(elapsed>8){simulation=false;document.querySelector('#stage').textContent='OUTPUT PORTAL · ANSWER READY';document.querySelector('#mission').textContent='Signal complete. You just watched an AI pipeline.';document.querySelector('#missionSub').textContent='Send another prompt or walk into the AI Core.';toast('✓ OUTPUT READY · the signal crossed the whole facility')}
+}
+
+function move(dt){
+ if(!walkMode||!walk.isLocked)return;
+ direction.set(0,0,0);
+ if(keys.KeyW||keys.ArrowUp)direction.z-=1;
+ if(keys.KeyS||keys.ArrowDown)direction.z+=1;
+ if(keys.KeyA||keys.ArrowLeft)direction.x-=1;
+ if(keys.KeyD||keys.ArrowRight)direction.x+=1;
+ if(direction.lengthSq()){direction.normalize();const speed=keys.ShiftLeft||keys.ShiftRight?7:3.7;walk.moveRight(direction.x*speed*dt);walk.moveForward(-direction.z*speed*dt)}
+ camera.position.y=2.1;
+ camera.position.x=THREE.MathUtils.clamp(camera.position.x,-15.2,15.2);
+ camera.position.z=THREE.MathUtils.clamp(camera.position.z,-15.2,15.2);
+}
+
+function animate(t){
+ const dt=Math.min(.05,(t-(animate.last||t))/1000);animate.last=t;
+ if(!walkMode)orbit.update();
+ move(dt);
+ coreGroup.rotation.y+=dt*.2;
+ coreGroup.rotation.x=Math.sin(t*.0005)*.15;
+ coreSphere.scale.setScalar(1+Math.sin(t*.002)*.06);
+ points.rotation.y+=dt*.035;
+ points.rotation.x=Math.sin(t*.00025)*.08;
+ neuralLines.forEach((l,i)=>{l.material.opacity=.07+Math.sin(t*.001+i)*.045});
+ attentionBeams.forEach((b,i)=>{
+  const a=stationMeshes[3].position.clone().add(new THREE.Vector3(0,1.3,0));
+  const target=stationMeshes[(i%3)+1].position.clone().add(new THREE.Vector3(0,1.5,0));
+  b.geometry.setFromPoints([a,target]);
+  b.material.opacity=.1+.22*(.5+.5*Math.sin(t*.002+i));
+ });
+ dataParticles.forEach(p=>{
+  p.userData.t=(p.userData.t+dt*(simulation?.35:.09))%1;
+  const st=streams[p.userData.route];if(st)p.position.copy(st.curve.getPoint(p.userData.t));
+ });
+ tokenGroup.children.forEach((m,i)=>{m.position.y=.8+Math.sin(t*.004+i)*.08;m.position.x=-3.4+((i*0.52+t*.001)%7)});
+ if(tour&&!walkMode){
+  tourClock+=dt;if(tourClock>3){tourClock=0;tourIndex=(tourIndex+1)%stations.length;inspect(stations[tourIndex].id)}
+  const target=stationMeshes[tourIndex].position.clone();orbit.target.lerp(target,.025);
+  camera.position.lerp(target.clone().add(new THREE.Vector3(0,3.2,7.5)),.02);
+ }
+ simulationTick();
+ renderer.render(scene,camera);
+}
 renderer.setAnimationLoop(animate);
+
 addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
-let load=0;const timer=setInterval(()=>{load+=7;document.querySelector('#bootbar').style.width=Math.min(load,100)+'%';if(load>=100){clearInterval(timer);setTimeout(()=>document.querySelector('#boot').classList.add('hide'),300)}},45);
+
+let load=0;const bootTimer=setInterval(()=>{load+=6.5;document.querySelector('#bootbar').style.width=Math.min(100,load)+'%';if(load>=100){clearInterval(bootTimer);setTimeout(()=>document.querySelector('#boot').classList.add('hide'),350)}},45);
 </script>
 </body>
 </html>
