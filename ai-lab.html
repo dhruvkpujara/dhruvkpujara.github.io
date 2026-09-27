@@ -11,9 +11,17 @@
 </head>
 <body>
 <div class="app"><div id="scene" class="scene"></div><div class="topbar"><div class="brand"><strong>AI LAB · DHRUV PUJARA</strong><span>Explore how modern AI turns input into an answer</span></div><div class="badge">360° · WEBXR READY</div></div><aside class="panel"><h1>How AI Works</h1><p>Orbit the exhibit, click a module, or start the guided tour. The visualization separates training from inference so the flow is easier to understand.</p><div id="steps" class="steps"></div></aside><aside id="info" class="info"><h2 id="infoTitle"></h2><p id="infoText"></p></aside><div class="hint">DRAG · ORBIT &nbsp; • &nbsp; WHEEL · ZOOM &nbsp; • &nbsp; CLICK · INSPECT</div><div class="controls"><button id="tourBtn">▶ Guided tour</button><button id="resetBtn">↺ Reset view</button><button id="vrBtn">◉ Enter VR</button></div><div id="loading" class="loading"><div class="loadbox"><h2>INITIALIZING AI LAB</h2><div class="bar"><i id="progress"></i></div></div></div></div>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"
+  }
+}
+</script>
 <script type="module">
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js';
-import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/controls/OrbitControls.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 const scene=new THREE.Scene();scene.background=new THREE.Color(0x050816);scene.fog=new THREE.FogExp2(0x050816,.025);const camera=new THREE.PerspectiveCamera(55,innerWidth/innerHeight,.1,120);camera.position.set(0,7,19);const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.xr.enabled=true;renderer.outputColorSpace=THREE.SRGBColorSpace;document.querySelector('#scene').appendChild(renderer.domElement);const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minDistance=8;controls.maxDistance=34;controls.target.set(0,3,0);
 scene.add(new THREE.HemisphereLight(0x9edfff,0x070a18,1.5));const key=new THREE.PointLight(0x66eaff,35,28);key.position.set(0,8,5);scene.add(key);const rim=new THREE.PointLight(0xa67cff,28,25);rim.position.set(-9,4,-5);scene.add(rim);const pink=new THREE.PointLight(0xff5bd6,22,22);pink.position.set(8,3,1);scene.add(pink);
 const floor=new THREE.Mesh(new THREE.CylinderGeometry(10,10,.35,96),new THREE.MeshStandardMaterial({color:0x080e20,metalness:.65,roughness:.3}));floor.position.y=-.25;scene.add(floor);const ring=new THREE.Mesh(new THREE.TorusGeometry(8.6,.035,8,128),new THREE.MeshBasicMaterial({color:0x45eaff}));ring.rotation.x=Math.PI/2;ring.position.y=-.05;scene.add(ring);const grid=new THREE.GridHelper(18,36,0x19395a,0x102038);grid.position.y=-.04;scene.add(grid);
