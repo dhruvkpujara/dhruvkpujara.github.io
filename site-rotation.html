@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111f">
+<title>Injection Site Rotation</title>
+<style>
+:root{--bg:#07111f;--card:#0e1b2d;--card2:#13263e;--text:#f5f8fc;--muted:#9fb0c4;--blue:#55d8ff;--green:#42e69a;--red:#ff7888;--line:#ffffff16}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 10% 0,#55d8ff18,transparent 32%),linear-gradient(180deg,#07111f,#050a14);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+main{width:min(1000px,100%);margin:auto;padding:20px 14px 35px}header{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:18px}h1{margin:0;font-size:clamp(28px,8vw,45px);line-height:1}.sub{color:var(--muted);line-height:1.5;margin:8px 0}.badge{color:var(--blue);border:1px solid #55d8ff33;border-radius:99px;padding:8px 10px;font-size:11px;font-weight:800;white-space:nowrap}
+.note,.today,.card{background:var(--card);border:1px solid var(--line);border-radius:18px}.note{padding:13px;font-size:13px;color:#cdefff;line-height:1.5;margin-bottom:14px}.today{padding:16px;margin-bottom:14px;background:linear-gradient(135deg,#132d43,#0e1b2d)}.today small{color:var(--muted)}.today strong{display:block;font-size:21px;margin-top:4px}.today span{color:var(--muted);font-size:12px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:18px}.stat{padding:13px;background:var(--card);border:1px solid var(--line);border-radius:15px}.stat b{font-size:22px;display:block}.stat small{color:var(--muted)}
+h2{font-size:20px;margin:20px 0 10px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.site{padding:14px;min-height:155px;background:var(--card);border:1px solid var(--line);border-radius:17px;display:flex;flex-direction:column;justify-content:space-between}.site.ready{border-color:#42e69a35}.site.cool{border-color:#ff78882c}.site b{font-size:16px}.last{font-size:12px;color:var(--muted);line-height:1.45;margin-top:6px}.status{font-size:12px;font-weight:800;margin:10px 0}.ready .status{color:var(--green)}.cool .status{color:var(--red)}button{width:100%;border:0;border-radius:11px;padding:11px 8px;background:var(--blue);color:#041018;font-weight:800}button:disabled{background:#26384b;color:#718095}
+.history{overflow:hidden}.row{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:8px;padding:11px 13px;border-bottom:1px solid var(--line);font-size:12px}.head{color:var(--muted);font-size:10px;text-transform:uppercase;font-weight:800}.empty{text-align:center;color:var(--muted);padding:18px}.reset{margin-top:12px;background:#ffffff08;color:#ff9ca8;border:1px solid #ff788833}
+footer{text-align:center;color:var(--muted);font-size:11px;line-height:1.5;margin-top:18px}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){header{display:block}.badge{display:inline-block;margin-top:10px}.stats{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:1/-1}.grid{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr 1fr}.row span:last-child{grid-column:1/-1}}
+</style>
+</head>
+<body><main>
+<header><div><h1>Site Rotation</h1><p class="sub">Your 8-site injection rotation tracker</p></div><div class="badge">7-DAY ROTATION</div></header>
+<div class="note"><b>Tracking only:</b> record sites that your healthcare professional has approved for your medication. This page does not decide where an injection should be given.</div>
+<section class="today"><small>Today · Wednesday, 30 September 2026</small><strong>Right hand recorded today</strong><span>Based on your stated history: Left hand was recorded yesterday.</span></section>
+<section class="stats"><div class="stat"><b id="available">8</b><small>Available</small></div><div class="stat"><b id="cooldown">0</b><small>In cooldown</small></div><div class="stat"><b id="next">—</b><small>Next eligible</small></div></section>
+<h2>Eight sites</h2><section class="grid" id="sites"></section>
+<h2>History</h2><section class="card history" id="history"></section>
+<button class="reset" id="reset">Reset history</button>
+<footer>Cooldown = 7 × 24 hours from the recorded time. Follow your clinician's instructions for the actual medication and approved sites.</footer>
+</main>
+<script>
+const sites=["Left butt","Right butt","Right hand","Left hand","Right thigh","Left thigh","Left tummy","Right tummy"],DAY=86400000,KEY="dhruv-injection-rotation-v1";
+let state={};try{state=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){state={}};
+if(!Object.keys(state).length){state={"Left hand":new Date("2026-09-29T12:00:00").getTime(),"Right hand":new Date("2026-09-30T12:00:00").getTime()};save()}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+function dt(t){return new Date(t).toLocaleDateString(undefined,{weekday:"short",day:"numeric",month:"short",year:"numeric"})}
+function tm(t){return new Date(t).toLocaleTimeString(undefined,{hour:"numeric",minute:"2-digit"})}
+function rem(t){return Math.max(0,t+7*DAY-Date.now())}
+function cd(x){let d=Math.floor(x/DAY),h=Math.floor(x%DAY/3600000);return d?d+"d "+h+"h":h?h+"h":"ready"}
+function render(){let now=Date.now(),a=0,c=0,next=null,box=document.getElementById("sites");box.innerHTML="";
+sites.forEach(name=>{let used=Number(state[name])||0,r=used?rem(used):0,ready=!used||r<=0;if(ready)a++;else{c++;let n=used+7*DAY;if(next===null||n<next)next=n}let x=document.createElement("article");x.className="site "+(ready?"ready":"cool");x.innerHTML="<div><b>"+name+"</b><div class='last'>"+(used?"Last: "+dt(used)+" at "+tm(used):"No record yet")+"</div><div class='status'>"+(ready?"● Available":"● Cooldown: "+cd(r))+"</div></div><button "+(ready?"":"disabled")+" data-site='"+name+"'>"+(ready?"Record use":"On cooldown")+"</button>";box.appendChild(x)});
+document.getElementById("available").textContent=a;document.getElementById("cooldown").textContent=c;document.getElementById("next").textContent=next?dt(next):"—";
+let entries=Object.entries(state).filter(x=>sites.includes(x[0])).sort((a,b)=>b[1]-a[1]);document.getElementById("history").innerHTML=entries.length?"<div class='row head'><span>Site</span><span>Used</span><span>Next eligible</span></div>"+entries.map(x=>"<div class='row'><span><b>"+x[0]+"</b></span><span>"+dt(x[1])+"<br>"+tm(x[1])+"</span><span>"+dt(x[1]+7*DAY)+"<br>"+tm(x[1]+7*DAY)+"</span></div>").join(""):"<div class='empty'>No history recorded.</div>"}
+document.getElementById("sites").onclick=e=>{let b=e.target.closest("[data-site]");if(!b)return;let s=b.dataset.site;if(confirm("Record "+s+" as used now?")){state[s]=Date.now();save();render()}};
+document.getElementById("reset").onclick=()=>{if(confirm("Delete all history?")){state={};save();render()}};
+render();setInterval(render,60000);
+</script></body></html>
